@@ -55,22 +55,22 @@ describe "ArrayUtil" do
       expect(ArrayUtil.middle_element([1, 3])).to eq(2)
       expect(ArrayUtil.middle_element([1, 3, 5, 7, 9, 11])).to eq(6)
     end
-   
+
     it "should return floats when the middle elements average to a decimal" do
       expect(ArrayUtil.middle_element([1, 2, 3, 4])).to eq(2.5)
     end
   end
 
   describe ".sum_arrays" do
-    it "should return an empty array if the inputs are empty" do
+    xit "should return an empty array if the inputs are empty" do
       expect(ArrayUtil.sum_arrays([], [])).to eq([])
     end
 
-    it "should return an array with the sum of two arrays with arrays size 1" do
+    xit "should return an array with the sum of two arrays with arrays size 1" do
       expect(ArrayUtil.sum_arrays([5], [6])).to eq([11])
     end
 
-    it "should return an array with the sum of two arrays with larger arrays" do
+    xit "should return an array with the sum of two arrays with larger arrays" do
       expect(ArrayUtil.sum_arrays([5, 6, 7, 8], [6, 9, 12, 15])).to eq([11, 15, 19, 23])
     end
   end
