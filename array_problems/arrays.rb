@@ -26,6 +26,13 @@ module ArrayUtil
   end
 
   def self.sum_arrays(array1, array2)
-
+    count = 0
+    new_array = []
+    for x in array1
+      sum = x + array2[count]
+      new_array << sum
+      count += 1
+    end
+    new_array
   end
 end
