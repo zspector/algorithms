@@ -3,7 +3,13 @@ require 'pry-debugger'
 
 module ArrayUtil
   def self.max(array)
-    array.sort.last
+    max = array[0]
+    for x in array do
+      if x > max
+        max = x
+      end
+    end
+    max
   end
 
   def self.middle_element(array)
@@ -20,5 +26,6 @@ module ArrayUtil
   end
 
   def self.sum_arrays(array1, array2)
+
   end
 end
