@@ -10,6 +10,7 @@ module ArrayUtil
       end
     end
     max
+    # array.sort.last
   end
 
   def self.middle_element(array)
