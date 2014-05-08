@@ -43,4 +43,38 @@ describe 'Sort' do
       end
     end
   end
+
+  describe '.merge' do
+    it "returns one large sorted array" do
+      expect(Sort.merge([1,3,5,7], [2,4,6,8])).to eq([1,2,3,4,5,6,7,8])
+    end
+
+    # it "returns"
+  end
+
+  describe '.mergesort' do
+    it "returns an empty array" do
+      expect(Sort.mergesort([])).to eq([])
+    end
+
+    it "returns an array with length of 1" do
+      expect(Sort.mergesort([1])).to eq([1])
+    end
+
+    it "returns a sorted array with length of 2" do
+      expect(Sort.mergesort([2,1])).to eq([1,2])
+    end
+
+    it "returns a sorted array with length of 4" do
+      expect(Sort.mergesort([3,2,4,1])).to eq([1,2,3,4])
+    end
+
+    it "returns a sorted array with length of 8" do
+      expect(Sort.mergesort([8,4,7,5,3,1,2,6])).to eq([1,2,3,4,5,6,7,8])
+    end
+
+    it "returns an odd numbered array" do
+      expect(Sort.mergesort([5,4,7,2,3,1,6])).to eq([1,2,3,4,5,6,7])
+    end
+  end
 end
